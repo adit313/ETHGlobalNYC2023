@@ -1,7 +1,7 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/adit313/ETHGlobalNYC2023/main/creditTransactionAuth/creditTransactionAuths.jsonld"
+      "jsonLdContext": "https://raw.githubusercontent.com/adit313/ETHGlobalNYC2023/master/creditTransactionAuth/creditTransactionAuths.jsonld"
     },
     "version": "1.0",
     "type": "cardAuth"
