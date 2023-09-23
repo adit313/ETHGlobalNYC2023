@@ -1,0 +1,98 @@
+{
+  "$metadata": {
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/adit313/ETHGlobalNYC2023/master/creditTransactionAuth/creditTransactionAuthNum.jsonld"
+    },
+    "version": "1.0",
+    "type": "cardAuth"
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Payment Card Transaction Authorization",
+  "title": "creditTransactionAuth",
+  "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "payee-address": {
+          "description": "Payee address",
+          "title": "payee-address",
+          "type": "string"
+        },
+        "transaction-amount": {
+          "description": "Authorized transaction amount",
+          "title": "transaction-amount",
+          "type": "number"
+        },
+        "recipient-address": {
+          "description": "Transaction recipient address",
+          "title": "recipient-address",
+          "pattern": "",
+          "type": "string"
+        },
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["payee-address", "transaction-amount", "recipient-address"],
+      "type": "object"
+    },
+    "@context": {
+      "type": ["string", "array", "object"]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": ["string", "object"],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["id"]
+    },
+    "type": {
+      "type": ["string", "array"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
+}

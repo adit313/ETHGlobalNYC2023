@@ -1,0 +1,31 @@
+{
+    "@context": [
+        {
+            "@protected": true,
+            "@version": 1.1,
+            "id": "@id",
+            "type": "@type",
+            "cardAuth": {
+                "@context": {
+                    "@propagate": true,
+                    "@protected": true,
+                    "polygon-vocab": "urn:uuid:37ca5213-8c80-4362-8135-ea76083f64d0#",
+                    "xsd": "http://www.w3.org/2001/XMLSchema#",
+                    "payee-address": {
+                        "@id": "polygon-vocab:payee-address",
+                        "@type": "xsd:string"
+                    },
+                    "transaction-amount": {
+                        "@id": "polygon-vocab:transaction-amount",
+                        "@type": "xsd:double"
+                    },
+                    "recipient-address": {
+                        "@id": "polygon-vocab:recipient-address",
+                        "@type": "xsd:string"
+                    }
+                },
+                "@id": "urn:uuid:0bca1403-be96-4686-b1ae-19d00011d4bb"
+            }
+        }
+    ]
+}
